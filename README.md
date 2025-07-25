@@ -1,9 +1,15 @@
 # CMMC Level 1 with OSCAL
 
-## Obtain an appropriate CMMC Level 1 catalog
+## 1. Obtain an appropriate CMMC Level 1 catalog
 
 https://github.com/FATHOM5CORP/oscal/tree/main/content/SP800-171/oscal-content
 is OSCAL 1.0.x -- not easy to automatically upgrade to 1.1.x
+
+This requires `oscal-cli` in your $PATH. If you don't have it you can simply:
+```
+cp cmmc-level-1-catalog-generated.json cmmc-level-1-catalog.json
+```
+...and skip to Step 2.
 
 ### Download a 800-171 OSCAL v1.1.x catalog 
 
@@ -36,7 +42,7 @@ oscal-cli resolve-profile --to=JSON cmmc-level-1-profile.json \
 oscal-cli validate cmmc-level-1-catalog.json
 ```
 
-## Discovery: use `trestle author` to allow SSP updates in markdown
+## 2. Discovery: use `trestle author` to allow SSP updates in markdown
 
 ### Note: Trestle may not be appropriate for 800-171
 From https://github.com/usnistgov/OSCAL/issues/1002

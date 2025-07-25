@@ -50,3 +50,5 @@ dmypy.json
 
 # This project specific
 /local-trestle/
+OSCAL_Cat_sp_800_171_2_0_0_230915132251.xml
+cmmc-level-1-catalog.json

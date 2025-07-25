@@ -1,0 +1,356 @@
+{
+  "catalog" : {
+    "groups" : [ {
+      "title" : "ACCESS CONTROL",
+      "id" : "_3.1",
+      "class" : "family",
+      "controls" : [ {
+        "title" : "3.1.1",
+        "class" : "requirement",
+        "id" : "_3.1.1",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.1.1_stmt",
+          "prose" : "Limit system access to authorized users, processes acting on behalf of authorized users, and devices (including other systems)."
+        }, {
+          "name" : "overview",
+          "id" : "_3.1.1_dsc",
+          "prose" : "Access control policies (e.g., identity- or role-based policies, control matrices, and cryptography) control access between active entities or subjects (i.e., users or processes acting on behalf of users) and passive entities or objects (e.g., devices, files, records, and domains) in systems. Access enforcement mechanisms can be employed at the application and service level to provide increased information security. Other systems include systems internal and external to the organization. This requirement focuses on account management for systems and applications. The definition of and enforcement of access authorizations, other than those determined by account type (e.g., privileged verses non-privileged) are addressed in requirement 3.1.2."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.1.2",
+        "class" : "requirement",
+        "id" : "_3.1.2",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.1.2_stmt",
+          "prose" : "Limit system access to the types of transactions and functions that authorized users are permitted to execute."
+        }, {
+          "name" : "overview",
+          "id" : "_3.1.2_dsc",
+          "prose" : "Organizations may choose to define access privileges or other attributes by account, by type of account, or a combination of both. System account types include individual, shared, group, system, anonymous, guest, emergency, developer, manufacturer, vendor, and temporary. Other attributes required for authorizing access include restrictions on time-of-day, day-of-week, and point-oforigin. In defining other account attributes, organizations consider system-related requirements (e.g., system upgrades scheduled maintenance,) and mission or business requirements, (e.g., time zone differences, customer requirements, remote access to support travel requirements)."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.1.20",
+        "class" : "requirement",
+        "id" : "_3.1.20",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.1.20_stmt",
+          "prose" : "Verify and control/limit connections to and use of external systems."
+        }, {
+          "name" : "overview",
+          "id" : "_3.1.20_dsc",
+          "prose" : "External systems are systems or components of systems for which organizations typically have no direct supervision and authority over the application of security requirements and controls or the determination of the effectiveness of implemented controls on those systems. External systems include personally owned systems, components, or devices and privately-owned computing and communications devices resident in commercial or public facilities. This requirement also addresses the use of external systems for the processing, storage, or transmission of CUI, including accessing cloud services (e.g., infrastructure as a service, platform as a service, or software as a service) from organizational systems.Organizations establish terms and conditions for the use of external systems in accordance with organizational security policies and procedures. Terms and conditions address as a minimum, the types of applications that can be accessed on organizational systems from external systems. Ifterms and conditions with the owners of external systems cannot be established, organizations may impose restrictions on organizational personnel using those external systems.This requirement recognizes that there are circumstances where individuals using external systems (e.g., contractors, coalition partners) need to access organizational systems. In those situations, organizations need confidence that the external systems contain the necessary controls so as not to compromise, damage, or otherwise harm organizational systems. Verification that the required controls have been effectively implemented can be achieved by third-party, independent assessments, attestations, or other means, depending on the assurance or confidence level required by organizations.Note that while \"external\" typically refers to outside of the organization’s direct supervision and authority, that is not always the case. Regarding the protection of CUI across an organization, the organization may have systems that process CUI and others that do not. And among the systems that process CUI there are likely access restrictions for CUI that apply between systems. Therefore, from the perspective of a given system, other systems within the organization may be considered \"external\" to that system."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.1.22",
+        "class" : "requirement",
+        "id" : "_3.1.22",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.1.22_stmt",
+          "prose" : "Control CUI posted or processed on publicly accessible systems."
+        }, {
+          "name" : "overview",
+          "id" : "_3.1.22_dsc",
+          "prose" : "In accordance with laws, Executive Orders, directives, policies, regulations, or standards, the public is not authorized access to nonpublic information (e.g., information protected under the Privacy Act, CUI, and proprietary information). This requirement addresses systems that are controlled by the organization and accessible to the public, typically without identification or authentication. Individuals authorized to post CUI onto publicly accessible systems are designated. The content of information is reviewed prior to posting onto publicly accessible systems to ensure that nonpublic information is not included."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      } ]
+    }, {
+      "title" : "IDENTIFICATION AND AUTHENTICATION",
+      "id" : "_3.5",
+      "class" : "family",
+      "controls" : [ {
+        "title" : "3.5.1",
+        "class" : "requirement",
+        "id" : "_3.5.1",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.5.1_stmt",
+          "prose" : "Identify system users, processes acting on behalf of users, and devices."
+        }, {
+          "name" : "overview",
+          "id" : "_3.5.1_dsc",
+          "prose" : "Common device identifiers include Media Access Control (MAC), Internet Protocol (IP) addresses, or device-unique token identifiers. Management of individual identifiers is not applicable to shared system accounts. Typically, individual identifiers are the user names associated with the system accounts assigned to those individuals. Organizations may require unique identification of individuals in group accounts or for detailed accountability of individual activity. In addition, this requirement addresses individual identifiers that are not necessarily associated with system accounts. Organizational devices requiring identification may be defined by type, by device, or by a combination of type/device.\\[SP 800-63-3\\] provides guidance on digital identities."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.5.2",
+        "class" : "requirement",
+        "id" : "_3.5.2",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.5.2_stmt",
+          "prose" : "Authenticate (or verify) the identities of users, processes, or devices, as a prerequisite to allowing access to organizational systems."
+        }, {
+          "name" : "overview",
+          "id" : "_3.5.2_dsc",
+          "prose" : "Individual authenticators include the following: passwords, key cards, cryptographic devices, and one-time password devices. Initial authenticator content is the actual content of the authenticator, for example, the initial password. In contrast, the requirements about authenticator content include the minimum password length. Developers ship system components with factory default authentication credentials to allow for initial installation and configuration. Default authentication credentials are often well known, easily discoverable, and present a significant security risk.Systems support authenticator management by organization-defined settings and restrictions for various authenticator characteristics including minimum password length, validation time window for time synchronous one-time tokens, and number of allowed rejections during the verification stage of biometric authentication. Authenticator management includes issuing and revoking, when no longer needed, authenticators for temporary access such as that required for remote maintenance. Device authenticators include certificates and passwords.\\[SP 800-63-3\\] provides guidance on digital identities."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      } ]
+    }, {
+      "title" : "MEDIA PROTECTION",
+      "id" : "_3.8",
+      "class" : "family",
+      "controls" : [ {
+        "title" : "3.8.3",
+        "class" : "requirement",
+        "id" : "_3.8.3",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.8.3_stmt",
+          "prose" : "Sanitize or destroy system media containing CUI before disposal or release for reuse."
+        }, {
+          "name" : "overview",
+          "id" : "_3.8.3_dsc",
+          "prose" : "This requirement applies to all system media, digital and non-digital, subject to disposal or reuse. Examples include: digital media found in workstations, network components, scanners, copiers, printers, notebook computers, and mobile devices; and non-digital media such as paper and microfilm. The sanitization process removes information from the media such that the information cannot be retrieved or reconstructed. Sanitization techniques, including clearing, purging, cryptographic erase, and destruction, prevent the disclosure of information to unauthorized individuals when such media is released for reuse or disposal.Organizations determine the appropriate sanitization methods, recognizing that destruction may be necessary when other methods cannot be applied to the media requiring sanitization. Organizations use discretion on the employment of sanitization techniques and procedures for media containing information that is in the public domain or publicly releasable or deemed to have no adverse impact on organizations or individuals if released for reuse or disposal. Sanitization of non-digital media includes destruction, removing CUI from documents, or redacting selected sections or words from a document by obscuring the redacted sections or words in a manner equivalent in effectiveness to removing the words or sections from the document. NARA policy and guidance control sanitization processes for controlled unclassified information.\\[SP 800-88\\] provides guidance on media sanitization."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      } ]
+    }, {
+      "title" : "PHYSICAL PROTECTION",
+      "id" : "_3.10",
+      "class" : "family",
+      "controls" : [ {
+        "title" : "3.10.1",
+        "class" : "requirement",
+        "id" : "_3.10.1",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.10.1_stmt",
+          "prose" : "Limit physical access to organizational systems, equipment, and the respective operating environments to authorized individuals."
+        }, {
+          "name" : "overview",
+          "id" : "_3.10.1_dsc",
+          "prose" : "This requirement applies to employees, individuals with permanent physical access authorization credentials, and visitors. Authorized individuals have credentials that include badges, identification cards, and smart cards. Organizations determine the strength of authorization credentials needed consistent with applicable laws, directives, policies, regulations, standards, procedures, and guidelines. This requirement applies only to areas within facilities that have not been designated as publicly accessible.Limiting physical access to equipment may include placing equipment in locked rooms or other secured areas and allowing access to authorized individuals only; and placing equipment in locations that can be monitored by organizational personnel. Computing devices, external disk drives, networking devices, monitors, printers, copiers, scanners, facsimile machines, and audio devices are examples of equipment."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.10.3",
+        "class" : "requirement",
+        "id" : "_3.10.3",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.10.3_stmt",
+          "prose" : "Escort visitors and monitor visitor activity."
+        }, {
+          "name" : "overview",
+          "id" : "_3.10.3_dsc",
+          "prose" : "Individuals with permanent physical access authorization credentials are not considered visitors. Audit logs can be used to monitor visitor activity."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.10.4",
+        "class" : "requirement",
+        "id" : "_3.10.4",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.10.4_stmt",
+          "prose" : "Maintain audit logs of physical access."
+        }, {
+          "name" : "overview",
+          "id" : "_3.10.4_dsc",
+          "prose" : "Organizations have flexibility in the types of audit logs employed. Audit logs can be procedural (e.g., a written log of individuals accessing the facility), automated (e.g., capturing ID provided by a PIV card), or some combination thereof. Physical access points can include facility access points, interior access points to systems or system components requiring supplemental access controls, or both. System components (e.g., workstations, notebook computers) may be in areas designated as publicly accessible with organizations safeguarding access to such devices."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.10.5",
+        "class" : "requirement",
+        "id" : "_3.10.5",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.10.5_stmt",
+          "prose" : "Control and manage physical access devices."
+        }, {
+          "name" : "overview",
+          "id" : "_3.10.5_dsc",
+          "prose" : "Physical access devices include keys, locks, combinations, and card readers."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      } ]
+    }, {
+      "title" : "SYSTEM AND COMMUNICATIONS PROTECTION",
+      "id" : "_3.13",
+      "class" : "family",
+      "controls" : [ {
+        "title" : "3.13.1",
+        "class" : "requirement",
+        "id" : "_3.13.1",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.13.1_stmt",
+          "prose" : "Monitor, control, and protect communications (i.e., information transmitted or received by organizational systems) at the external boundaries and key internal boundaries of organizational systems."
+        }, {
+          "name" : "overview",
+          "id" : "_3.13.1_dsc",
+          "prose" : "Communications can be monitored, controlled, and protected at boundary components and by restricting or prohibiting interfaces in organizational systems. Boundary components include gateways, routers, firewalls, guards, network-based malicious code analysis and virtualization systems, or encrypted tunnels implemented within a system security architecture (e.g., routers protecting firewalls or application gateways residing on protected subnetworks). Restricting or prohibiting interfaces in organizational systems includes restricting external web communications traffic to designated web servers within managed interfaces and prohibiting external traffic that appears to be spoofing internal addresses.Organizations consider the shared nature of commercial telecommunications services in the implementation of security requirements associated with the use of such services. Commercial telecommunications services are commonly based on network components and consolidated management systems shared by all attached commercial customers and may also include third party-provided access lines and other service elements. Such transmission services may represent sources of increased risk despite contract security provisions.\\[SP 800-41\\] provides guidance on firewalls and firewall policy. \\[SP 800-125B\\] provides guidance on security for virtualization technologies."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.13.5",
+        "class" : "requirement",
+        "id" : "_3.13.5",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.13.5_stmt",
+          "prose" : "Implement subnetworks for publicly accessible system components that are physically or logically separated from internal networks."
+        }, {
+          "name" : "overview",
+          "id" : "_3.13.5_dsc",
+          "prose" : "Subnetworks that are physically or logically separated from internal networks are referred to as demilitarized zones (DMZs). DMZs are typically implemented with boundary control devices and techniques that include routers, gateways, firewalls, virtualization, or cloud-based technologies. \\[SP 800-41\\] provides guidance on firewalls and firewall policy. \\[SP 800-125B\\] provides guidance on security for virtualization technologies."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      } ]
+    }, {
+      "title" : "SYSTEM AND INFORMATION INTEGRITY",
+      "id" : "_3.14",
+      "class" : "family",
+      "controls" : [ {
+        "title" : "3.14.1",
+        "class" : "requirement",
+        "id" : "_3.14.1",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.14.1_stmt",
+          "prose" : "Identify, report, and correct system flaws in a timely manner."
+        }, {
+          "name" : "overview",
+          "id" : "_3.14.1_dsc",
+          "prose" : "Organizations identify systems that are affected by announced software and firmware flaws including potential vulnerabilities resulting from those flaws and report this information to designated personnel with information security responsibilities. Security-relevant updates include patches, service packs, hot fixes, and anti-virus signatures. Organizations address flaws discovered during security assessments, continuous monitoring, incident response activities, and system error handling. Organizations can take advantage of available resources such as the Common Weakness Enumeration (CWE) database or Common Vulnerabilities and Exposures (CVE) database in remediating flaws discovered in organizational systems.Organization-defined time periods for updating security-relevant software and firmware may vary based on a variety of factors including the criticality of the update (i.e., severity of the vulnerability related to the discovered flaw). Some types of flaw remediation may require more testing than other types of remediation.\\[SP 800-40\\] provides guidance on patch management technologies."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.14.2",
+        "class" : "requirement",
+        "id" : "_3.14.2",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.14.2_stmt",
+          "prose" : "Provide protection from malicious code at designated locations within organizational systems."
+        }, {
+          "name" : "overview",
+          "id" : "_3.14.2_dsc",
+          "prose" : "Designated locations include system entry and exit points which may include firewalls, remoteaccess servers, workstations, electronic mail servers, web servers, proxy servers, notebook computers, and mobile devices. Malicious code includes viruses, worms, Trojan horses, and spyware. Malicious code can be encoded in various formats (e.g., UUENCODE, Unicode), contained within compressed or hidden files, or hidden in files using techniques such as steganography. Malicious code can be inserted into systems in a variety of ways including web accesses, electronic mail, electronic mail attachments, and portable storage devices. Malicious code insertions occur through the exploitation of system vulnerabilities.Malicious code protection mechanisms include anti-virus signature definitions and reputationbased technologies. A variety of technologies and methods exist to limit or eliminate the effects of malicious code. Pervasive configuration management and comprehensive software integrity controls may be effective in preventing execution of unauthorized code. In addition to commercial off-the-shelf software, malicious code may also be present in custom-built software. This could include logic bombs, back doors, and other types of cyber-attacks that could affect organizational missions/business functions. Traditional malicious code protection mechanisms cannot always detect such code. In these situations, organizations rely instead on other safeguards including secure coding practices, configuration management and control, trusted procurement processes, and monitoring practices to help ensure that software does not perform functions other than the functions intended.\\[SP 800-83\\] provides guidance on malware incident prevention."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_basic",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.14.4",
+        "class" : "requirement",
+        "id" : "_3.14.4",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.14.4_stmt",
+          "prose" : "Update malicious code protection mechanisms when new releases are available."
+        }, {
+          "name" : "overview",
+          "id" : "_3.14.4_dsc",
+          "prose" : "Malicious code protection mechanisms include anti-virus signature definitions and reputationbased technologies. A variety of technologies and methods exist to limit or eliminate the effects of malicious code. Pervasive configuration management and comprehensive software integrity controls may be effective in preventing execution of unauthorized code. In addition to commercial off-the-shelf software, malicious code may also be present in custom-built software. This could include logic bombs, back doors, and other types of cyber-attacks that could affect organizational missions/business functions. Traditional malicious code protection mechanisms cannot always detect such code. In these situations, organizations rely instead on other safeguards including secure coding practices, configuration management and control, trusted procurement processes, and monitoring practices to help ensure that software does not perform functions other than the functions intended."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      }, {
+        "title" : "3.14.5",
+        "class" : "requirement",
+        "id" : "_3.14.5",
+        "parts" : [ {
+          "name" : "statement",
+          "id" : "_3.14.5_stmt",
+          "prose" : "Perform periodic scans of organizational systems and real-time scans of files from external sources as files are downloaded, opened, or executed."
+        }, {
+          "name" : "overview",
+          "id" : "_3.14.5_dsc",
+          "prose" : "Periodic scans of organizational systems and real-time scans of files from external sources can detect malicious code. Malicious code can be encoded in various formats (e.g., UUENCODE, Unicode), contained within compressed or hidden files, or hidden in files using techniques such as steganography. Malicious code can be inserted into systems in a variety of ways including web accesses, electronic mail, electronic mail attachments, and portable storage devices. Malicious code insertions occur through the exploitation of system vulnerabilities."
+        } ],
+        "props" : [ {
+          "class" : "requirement_type",
+          "value" : "RT_derived",
+          "name" : "marking"
+        } ]
+      } ]
+    } ],
+    "uuid" : "edf125fc-4edf-44d6-84fa-7126a3087d38",
+    "metadata" : {
+      "links" : [ {
+        "href" : "",
+        "rel" : "source-profile"
+      } ],
+      "title" : "CMMC Level 1 Tailored Profile",
+      "version" : "1.0.0",
+      "props" : [ {
+        "value" : "libOSCAL-Java",
+        "name" : "resolution-tool"
+      } ],
+      "oscal-version" : "1.1.2",
+      "last-modified" : "2025-07-25T16:40:56.037002405Z"
+    }
+  }
+}
